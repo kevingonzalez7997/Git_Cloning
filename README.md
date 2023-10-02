@@ -1,34 +1,36 @@
 ## pre requires
 
-- VS CODE (We'll be using vs code running on an instance)
+- VS CODE (Optional but VS offers a better user experience)(We'll be using vs code running on an instance)
 - Git installed on EC2
 
 ## Steps
 
 ### 1) Create a New Repo
 
-- In GitHub create a new repo, this is where Git will push the cloned repo.
+- In GitHub create a new repo, this is where Git will push the cloned repo. ( This will be considered the remote location) 
 - Save the link as you will need it for later
 
 ### 2) Clone repo
 
-- In VS code create a new directory. This is where we will put the cloned repository 
+- In VS code create a new directory (This will be considered the local location). This is where we will put the cloned repository 
    -`mkdir repo_name`
-- Once create cd into it and then cd into .git and clone
-   - `cd .git`
-   - `git clone repo_url`
 
-### 3) Set config files
+- Clone the repository from where the repo with source code is located  
+  -`git clone repo_link`
 
-- while in the git directory 
+
+### 3) Set config files 
+- cd into the freshly cloned repo and then cd into the main branch
+- while in the main branch directory
+  -`cd .git` 
    -`nano config`
 - This is where git links to GitHub
 - `[remote "origin"] url = repo_link`
-- save and exit
+- link and put the remote location URL, save, and exit 
+- cd back into the repo directory on the local
+### 4) Push clone to GitHub (pushing local to remote)
 
-### 4) Push clone to GitHub
-
-- Before you can push the changes to the remote repository username and email must be created
+- Before you can push the changes to the remote repository, a username and email must be created
 -  `git --global user.name "your_name"`
 -  `git --global user.email "your_email"`
 -  Once credentials have been set up run the push command
