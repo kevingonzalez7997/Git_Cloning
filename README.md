@@ -28,6 +28,15 @@
 - `[remote "origin"] url = repo_link`
 - link and put the remote location URL, save, and exit 
 - cd back into the repo directory on the local
+
+### 4) Branch and merge
+It is good practice to branch repo, creating a staging environment before deployment
+- `git branch new_branch_name`
+- `git merge branch_name`
+-After making changes, stage them using the git add command, and then commit your changes
+   -`git add .`
+   -`git commit -m "Your commit message here"`
+  
 ### 4) Push clone to GitHub (pushing local to remote)
 
 - Before you can push the changes to the remote repository, a username and email must be created
